@@ -1,6 +1,6 @@
-# OpenCV Training Image Blurring
+# OpenCV Training Image Blurring/Sharpening.
 
-An introduction to image blurring using OpenCV.
+An introduction to image blurring/sharpening using OpenCV.
 
 ## Contents :
 I have used 2D-convolution kernels and the OpenCV Computer Vision library to apply different blurring and sharpening techniques to an image. 
@@ -32,10 +32,17 @@ I have used test.jpg & identity.jpg that can be found in the repository.
 image = cv2.imread('test.jpg')
 ```
 ```python
-#Define kernel
+#Define kernel for blurring
 kernel1 = np.array([[0, 0, 0],
                    [0, 1, 0],
                    [0, 0, 0]])
+```
+
+```python
+#Define kernel for sharpening
+kernel3 = np.array([[0, -1, 0],
+                   [-1, 5, -1],
+                   [0, -1, 0]])
 ```
 ```python
 #Define arguments for filter2D()
